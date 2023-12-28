@@ -1,0 +1,15 @@
+# This workflow is for a nightly run against WildFly upstream
+
+name: WildFly
+
+on:
+  push:
+    branches:
+      - 'main'
+
+jobs:
+  wildfly-build:
+    uses: wildfly/wildfly/.github/workflows/shared-wildfly-build.yml@main
+    with:
+      wildfly-branch: "main"
+      wildfly-repo: "wildfly/wildfly"
